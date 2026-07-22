@@ -1,5 +1,5 @@
 # Caption_Generation_Pipeline
-# Knowledge-Guided Hyperspectral Image Caption Generation Pipeline
+## Knowledge-Guided Hyperspectral Image Caption Generation Pipeline
 
 A research-oriented framework for generating accurate, explainable, and confidence-aware natural language captions from hyperspectral images by integrating deep learning, spectral knowledge, ontology-based reasoning, and fact verification.
 
@@ -59,6 +59,7 @@ Completed:
 
 ## Repository Structure
 
+```text
 Caption_Generation_Pipeline/
 │
 ├── configs/
@@ -69,7 +70,7 @@ Caption_Generation_Pipeline/
 ├── requirements.txt
 ├── pyproject.toml
 └── README.md
-
+```
 
 ---
 
@@ -113,4 +114,5 @@ The implementation is designed for hyperspectral datasets such as:
 ## Future Work
 
 The next phase of development focuses on implementing the **Multi-Encoder Module**, which will extract spectral, spatial, and metadata features from hyperspectral image patches. Subsequent modules will incorporate domain knowledge, reasoning, semantic generation, uncertainty estimation, and verification to produce reliable image captions.
+
 
