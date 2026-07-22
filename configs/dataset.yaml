@@ -1,0 +1,15 @@
+dataset:
+  name: WHU-Hi
+
+  scenes:
+    - LongKou
+    - HanChuan
+    - HongHu
+
+  extension: .mat
+
+preprocessing:
+  normalize: true
+  normalization: minmax
+  patch_size: 15
+  stride: 1
