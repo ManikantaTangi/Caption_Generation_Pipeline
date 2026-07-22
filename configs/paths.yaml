@@ -1,0 +1,20 @@
+project:
+  root: .
+
+data:
+  raw: data/raw
+  processed: data/processed
+  metadata: data/metadata
+  spectral_library: data/spectral_library
+  captions: data/captions
+  embeddings: data/embeddings
+  facts: data/facts
+  verification: data/verification
+
+models:
+  checkpoints: models
+
+outputs:
+  logs: outputs/logs
+  figures: outputs/figures
+  reports: outputs/reports

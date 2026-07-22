@@ -1,0 +1,15 @@
+encoder:
+  spectral:
+    embedding_dim: 256
+
+  spatial:
+    embedding_dim: 256
+
+  metadata:
+    embedding_dim: 64
+
+fusion:
+  embedding_dim: 512
+
+caption:
+  max_length: 128
