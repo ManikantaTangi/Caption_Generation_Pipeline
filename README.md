@@ -690,6 +690,19 @@ If you would like to improve the project:
 5. Open a Pull Request.
 
 ---
+# 📖 Citation
+
+If you use this repository in your research, please cite it as:
+
+```bibtex
+@misc{caption_generation_pipeline,
+  title={Caption Generation Pipeline},
+  author={Manikanta Tangi},
+  year={2026},
+  note={GitHub Repository},
+  url={https://github.com/ManikantaTangi/Caption-Generation-Pipeline}
+}
+```
 
 # 📜 License
 
