@@ -378,7 +378,7 @@ Caption-Generation-Pipeline/
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/Caption-Generation-Pipeline.git
+git clone https://github.com/ManikantaTangi/Caption_Generation_Pipeline.git
 
 cd Caption-Generation-Pipeline
 ```
