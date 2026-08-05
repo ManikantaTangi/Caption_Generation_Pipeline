@@ -1,0 +1,19 @@
+# Template bank for confidence-aware caption generation (Stage 9).
+# {dominant_material}, {secondary_material}, {confidence_pct} are filled
+# in by CaptionGenerator / LanguageController from Stage 8's verified
+# facts. Templates deliberately frame the material identification as
+# something OBSERVED (spectral/spatial evidence, the trained model's
+# assessment) rather than asserted -- richer, evidence-specific detail
+# (which spectral match, which rule, why) lives in the companion
+# `explanation` field (see ExplanationGenerator), keeping the caption
+# itself concise and the explanation fully auditable.
+templates:
+  high:
+    - "Based on its observed spectral and spatial characteristics, this patch predominantly shows {dominant_material}, identified with high confidence ({confidence_pct}%)."
+    - "The observed features strongly match {dominant_material}, which is identified as the dominant land cover here with high confidence ({confidence_pct}%)."
+  medium:
+    - "The patch's observed spectral and spatial features most closely resemble {dominant_material}, possibly alongside {secondary_material}; confidence is moderate ({confidence_pct}%)."
+    - "Based on the features observed, the dominant material appears to be {dominant_material}, though some uncertainty remains ({confidence_pct}% confidence)."
+  low:
+    - "The observed features weakly suggest {dominant_material}, but confidence is low ({confidence_pct}%) and further verification is recommended."
+    - "Based on limited distinguishing features, {dominant_material} is the most probable class among low-confidence candidates ({confidence_pct}%)."
