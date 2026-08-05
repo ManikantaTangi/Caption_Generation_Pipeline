@@ -1,118 +1,61 @@
-# Caption_Generation_Pipeline
-## Knowledge-Guided Hyperspectral Image Caption Generation Pipeline
+# Caption Generation Pipeline
 
-A research-oriented framework for generating accurate, explainable, and confidence-aware natural language captions from hyperspectral images by integrating deep learning, spectral knowledge, ontology-based reasoning, and fact verification.
+> **A Knowledge-Guided Neuro-Symbolic Framework for Explainable Hyperspectral Image Caption Generation with Bayesian Uncertainty Estimation and Multi-Stage Fact Verification**
 
----
+## 📖 Overview
 
-## Overview
+**Caption Generation Pipeline** is an end-to-end framework for generating **trustworthy, explainable natural-language captions** from hyperspectral imagery (HSI). Unlike conventional HSI classification systems that only predict land-cover labels, this project combines **deep learning**, **domain knowledge**, **ontology reasoning**, **Bayesian uncertainty estimation**, and **symbolic fact verification** to generate semantically rich, confidence-aware image descriptions.
 
-Hyperspectral imagery contains hundreds of spectral bands that provide rich information about the physical and chemical properties of materials. Traditional image captioning methods are primarily designed for RGB images and often fail to exploit the rich spectral information available in hyperspectral data.
+The framework follows a **nine-stage modular pipeline**, progressively transforming raw hyperspectral image patches into verified natural-language captions through spectral–spatial feature extraction, knowledge-guided reasoning, ontology enrichment, structured fact generation, uncertainty estimation, and explainable caption synthesis.
 
-This project proposes a **Knowledge-Guided Hyperspectral Image Caption Generation Pipeline** that combines spectral-spatial feature extraction with external knowledge, reasoning mechanisms, uncertainty estimation, and fact verification to generate semantically meaningful and reliable captions.
-
----
-
-## Proposed Architecture
-
-The complete pipeline consists of the following modules:
-
-1. Preprocessing & Inspection
-2. Multi-Encoder Module
-3. Spectral Knowledge Engine
-4. Expert Reasoning Layer
-5. Ontology-Enriched Semantic Generator
-6. Structured Fact Generator
-7. Uncertainty Estimation
-8. Fact Verification
-9. Confidence-Aware Caption Generation
+Designed with a configuration-driven architecture, the project supports reproducible experimentation, modular development, and easy replacement of individual pipeline components while maintaining a consistent end-to-end workflow.
 
 ---
 
-## Current Progress
+## 🎯 Objectives
 
-### ✅ Completed
+The primary objectives of this project are:
 
-**Preprocessing & Inspection Module**
-
-Implemented components:
-
-- Configuration Manager
-- Dataset Discovery
-- Dataset Validator
-- Dataset Loader
-- Dataset Inspector
-- Dataset Visualization
-- Dataset Statistics
-- Dataset Normalization
-- Patch Generator
-
-Completed:
-
-- Source code
-- Unit tests
-- Demonstrations
-- Module documentation
-- Workflow diagrams
+- Generate natural-language captions from hyperspectral imagery.
+- Integrate deep learning with symbolic reasoning.
+- Improve interpretability using expert knowledge and ontologies.
+- Estimate prediction uncertainty using Bayesian inference.
+- Verify generated facts before caption generation.
+- Produce confidence-aware and explainable captions.
+- Provide a modular research framework for hyperspectral image understanding.
 
 ---
 
-## Repository Structure
+## ✨ Key Features
 
-```text
-Caption_Generation_Pipeline/
-│
-├── configs/
-├── demos/
-├── docs/
-├── src/
-├── tests/
-├── requirements.txt
-├── pyproject.toml
-└── README.md
-```
-
----
-
-## Technologies Used
-
-- Python 3.10+
-- NumPy
-- SciPy
-- Matplotlib
-- PyYAML
-- unittest
+- Multi-stage modular architecture
+- Spectral–Spatial Multi-Encoder Network
+- Knowledge-guided spectral retrieval
+- Knowledge Graph construction and reasoning
+- Expert rule-based symbolic reasoning
+- Ontology-enriched semantic representation
+- Structured RDF-style fact generation
+- Bayesian uncertainty estimation using Monte Carlo Dropout
+- Confidence calibration
+- Multi-source fact verification
+- Confidence-aware natural-language generation
+- Explainable AI (XAI)
+- Configuration-driven YAML architecture
+- Lightweight NumPy reference implementation
+- PyTorch training pipeline
+- Comprehensive unit and integration testing
 
 ---
 
-## Dataset
+## 🚀 Highlights
 
-The implementation is designed for hyperspectral datasets such as:
-
-- WHU-Hi Dataset
-
-> **Note:** Due to licensing and storage limitations, raw datasets are not included in this repository.
-
----
-
-## Project Status
-
-| Module | Status |
-|---------|--------|
-| Preprocessing & Inspection | ✅ Completed |
-| Multi-Encoder Module | 🔄 In Progress |
-| Spectral Knowledge Engine | ⏳ Planned |
-| Expert Reasoning Layer | ⏳ Planned |
-| Ontology-Enriched Semantic Generator | ⏳ Planned |
-| Structured Fact Generator | ⏳ Planned |
-| Uncertainty Estimation | ⏳ Planned |
-| Fact Verification | ⏳ Planned |
-| Confidence-Aware Caption Generation | ⏳ Planned |
-
----
-
-## Future Work
-
-The next phase of development focuses on implementing the **Multi-Encoder Module**, which will extract spectral, spatial, and metadata features from hyperspectral image patches. Subsequent modules will incorporate domain knowledge, reasoning, semantic generation, uncertainty estimation, and verification to produce reliable image captions.
-
+- End-to-end **9-stage hyperspectral image caption generation pipeline**
+- Neuro-symbolic AI architecture
+- Bayesian uncertainty estimation
+- Explainable decision making
+- Knowledge-guided semantic reasoning
+- Ontology-based concept refinement
+- Structured fact verification
+- Research-oriented modular software design
+- Reproducible experimental framework
 
