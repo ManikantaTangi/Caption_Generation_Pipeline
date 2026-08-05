@@ -502,3 +502,228 @@ The complete workflow performs:
 9. Confidence-aware caption generation
 
 ---
+
+# 📈 Results
+
+The proposed Caption Generation Pipeline demonstrates the effectiveness of integrating deep learning with knowledge-guided reasoning, ontology enrichment, Bayesian uncertainty estimation, and multi-stage fact verification.
+
+## Performance Improvements
+
+| Metric | Before Training | After Training |
+|---------|----------------:|---------------:|
+| Material Match Accuracy | **79.0%** | **86.0%** |
+| Mean Confidence Score | **0.002** | **0.657** |
+| Mean Verification Score | **0.508** | **0.577** |
+
+The trained encoder and Bayesian uncertainty head significantly improve prediction confidence while maintaining interpretable reasoning throughout the pipeline.
+
+---
+
+## Model Evaluation
+
+The encoder network is evaluated using multiple classification metrics.
+
+| Metric | Value |
+|----------|-------|
+| Overall Accuracy (OA) | **91.3%** |
+| Cohen's Kappa | **0.889** |
+| Evaluation Method | Official Train/Test Split |
+
+---
+
+# 📊 Output Visualizations
+
+The pipeline automatically generates visualizations to support model evaluation and explainability.
+
+## Dataset Visualizations
+
+- False Color Composite Image
+- Ground Truth Label Map
+- Mean Spectral Signatures
+
+## Model Evaluation
+
+- Confusion Matrix
+- Training Performance
+- Before vs After Comparison
+
+## Confidence Analysis
+
+- Confidence Score Distribution
+- Verification Confidence Analysis
+- Bayesian Uncertainty Estimation
+
+## Caption Generation
+
+- Confidence-aware captions
+- Explainable reasoning summary
+- Structured fact visualization
+
+> Place generated figures inside the `outputs/figures/` directory.
+
+---
+
+# 🧠 Explainable AI Pipeline
+
+Unlike traditional hyperspectral classification systems, every generated caption is supported by explicit evidence.
+
+The reasoning process consists of:
+
+```text
+Raw HSI Patch
+      │
+      ▼
+Deep Feature Extraction
+      │
+      ▼
+Knowledge Retrieval
+      │
+      ▼
+Rule-based Reasoning
+      │
+      ▼
+Ontology Matching
+      │
+      ▼
+Structured Fact Generation
+      │
+      ▼
+Bayesian Confidence Estimation
+      │
+      ▼
+Fact Verification
+      │
+      ▼
+Confidence-aware Caption
+```
+
+Every generated caption is backed by:
+
+- Spectral evidence
+- Knowledge graph evidence
+- Expert rules
+- Ontology reasoning
+- Bayesian confidence
+- Verification score
+
+This makes the entire prediction process interpretable and explainable.
+
+---
+
+# 🔬 Research Contributions
+
+The proposed framework introduces several research-oriented contributions:
+
+- End-to-end hyperspectral image caption generation pipeline.
+- Integration of spectral–spatial deep learning with symbolic reasoning.
+- Knowledge-guided semantic representation learning.
+- Ontology-enriched concept refinement.
+- Bayesian uncertainty estimation using Monte Carlo Dropout.
+- Confidence-aware natural language generation.
+- Multi-source fact verification before caption generation.
+- Modular architecture supporting independent stage development and testing.
+- Explainable AI framework for trustworthy hyperspectral image understanding.
+
+---
+
+# 🧪 Testing
+
+The project includes comprehensive testing to ensure correctness and reproducibility.
+
+## Unit Tests
+
+- Stage 1 – Data Preprocessing
+- Stage 2 – Multi-Encoder
+- Stage 3 – Knowledge Engine
+- Stage 4 – Expert Reasoning
+- Stage 5 – Ontology Engine
+- Stage 6 – Structured Fact Generation
+- Stage 7 – Bayesian Uncertainty
+- Stage 8 – Fact Verification
+- Stage 9 – Caption Generation
+
+## Integration Tests
+
+- End-to-end pipeline execution
+- Official dataset split validation
+
+Run all tests using:
+
+```bash
+pytest tests/
+```
+
+Or execute an individual stage test:
+
+```bash
+pytest tests/test_stage3_knowledge_engine.py
+```
+
+---
+
+# 🔮 Future Work
+
+Potential extensions include:
+
+- Large Vision-Language Model (VLM) integration
+- Graph Neural Networks for knowledge reasoning
+- Multi-temporal hyperspectral caption generation
+- Multi-sensor data fusion (HSI + LiDAR + SAR)
+- Active learning using uncertainty estimation
+- Retrieval-Augmented Caption Generation (RAG)
+- Multilingual caption generation
+- Deployment as a cloud-based inference service
+- Real-time UAV hyperspectral caption generation
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+If you would like to improve the project:
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Push the branch.
+5. Open a Pull Request.
+
+---
+
+# 📜 License
+
+This project is released under the **MIT License**.
+
+See the `LICENSE` file for additional details.
+
+---
+
+# 🙏 Acknowledgements
+
+This project builds upon concepts from:
+
+- Hyperspectral Image Analysis
+- Deep Learning
+- Explainable Artificial Intelligence (XAI)
+- Neuro-Symbolic AI
+- Knowledge Graphs
+- Ontology Engineering
+- Bayesian Deep Learning
+- Trustworthy AI
+
+Special thanks to the researchers and open-source community whose work has contributed to the advancement of hyperspectral image understanding.
+
+---
+
+# 📧 Contact
+
+For questions, discussions, or collaboration opportunities, feel free to open an issue or contact the repository maintainer.
+
+---
+
+<div align="center">
+
+**⭐ If you find this project useful, consider giving the repository a star! ⭐**
+
+</div>
