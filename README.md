@@ -59,3 +59,229 @@ The primary objectives of this project are:
 - Research-oriented modular software design
 - Reproducible experimental framework
 
+## 🏗️ System Architecture
+
+The Caption Generation Pipeline follows a modular **nine-stage architecture**, where each stage performs a dedicated task while passing structured outputs to the next stage. This design promotes modularity, reproducibility, maintainability, and independent testing.
+
+```text
+                           ┌───────────────────────────┐
+                           │  Stage 1                  │
+                           │ Data Preprocessing        │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 2                  │
+                           │ Multi-Encoder Network     │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 3                  │
+                           │ Spectral Knowledge Engine │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 4                  │
+                           │ Expert Reasoning Layer    │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 5                  │
+                           │ Ontology Engine           │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 6                  │
+                           │ Structured Fact Generator │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 7                  │
+                           │ Bayesian Uncertainty      │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 8                  │
+                           │ Fact Verification         │
+                           └─────────────┬─────────────┘
+                                         │
+                                         ▼
+                           ┌───────────────────────────┐
+                           │  Stage 9                  │
+                           │ Caption Generation        │
+                           └───────────────────────────┘
+```
+
+---
+
+## ⚙️ Pipeline Stages
+
+### Stage 1 — Data Preprocessing
+
+Prepares the hyperspectral dataset for downstream processing.
+
+**Responsibilities**
+
+- Dataset loading
+- Dataset validation
+- Spectral normalization
+- Dataset inspection
+- Patch extraction
+- Official train/test split loading
+- False-color visualization
+- Ground-truth visualization
+
+**Output**
+
+- Preprocessed hyperspectral patches
+
+---
+
+### Stage 2 — Multi-Encoder Network
+
+Extracts complementary information from hyperspectral patches using multiple encoders.
+
+**Components**
+
+- Spectral CNN Encoder
+- Spatial Vision Transformer Encoder
+- Metadata Encoder
+- Attention-based Feature Fusion
+
+**Output**
+
+- Unified spectral-spatial feature embedding
+
+---
+
+### Stage 3 — Spectral Knowledge Engine
+
+Transforms learned features into knowledge-guided semantic representations.
+
+**Components**
+
+- Spectral Library Retrieval
+- Material Identification
+- Knowledge Graph Construction
+- Semantic Embedding Generation
+
+**Output**
+
+- Knowledge-aware semantic representation
+
+---
+
+### Stage 4 — Expert Reasoning Layer
+
+Applies symbolic reasoning using expert-defined rules.
+
+**Components**
+
+- Rule Engine
+- Constraint Checker
+- Context Generator
+- Reasoning Confidence Estimation
+
+**Output**
+
+- Context-aware symbolic knowledge
+
+---
+
+### Stage 5 — Ontology-Enriched Semantic Generation
+
+Maps symbolic knowledge into a formal ontology.
+
+**Components**
+
+- Ontology Loader
+- Ontology Matcher
+- Semantic Generator
+- Ontology Refiner
+
+**Output**
+
+- Ontology-enriched semantic representation
+
+---
+
+### Stage 6 — Structured Fact Generation
+
+Converts symbolic knowledge into machine-readable facts.
+
+**Components**
+
+- Fact Extraction
+- Triplet Generation
+- Relationship Generation
+- Fact Ranking
+
+**Output**
+
+- Ranked RDF-style structured facts
+
+---
+
+### Stage 7 — Bayesian Uncertainty Estimation
+
+Estimates predictive uncertainty using Bayesian Deep Learning.
+
+**Components**
+
+- Bayesian Predictor
+- Monte Carlo Dropout
+- Entropy Decomposition
+- Temperature Calibration
+- Confidence Fusion
+
+**Output**
+
+- Confidence score
+- Predictive uncertainty
+- Epistemic uncertainty
+- Aleatoric uncertainty
+
+---
+
+### Stage 8 — Fact Verification
+
+Verifies generated facts before natural-language generation.
+
+**Verification Sources**
+
+- Semantic similarity
+- Knowledge graph consistency
+- Ontology consistency
+- Rule consistency
+- Bayesian classifier agreement
+
+**Output**
+
+- Verified facts
+- Rejected facts
+- Verification confidence
+
+---
+
+### Stage 9 — Caption Generation
+
+Generates explainable natural-language captions from verified facts.
+
+**Components**
+
+- Template Selection
+- Caption Generation
+- Caption Refinement
+- Explanation Generation
+- Language Controller
+
+**Output**
+
+- Confidence-aware natural-language caption
+- Explainable reasoning summary
