@@ -1,0 +1,50 @@
+# Lightweight OWL-style ontology for the agricultural / land-cover domain.
+# Represented as YAML rather than a .owl file so the reference implementation
+# has zero heavyweight dependencies; `OntologyLoader` builds an in-memory
+# class/property graph from this file with the same semantics OWLReady2 /
+# RDFlib would give (rdfs:subClassOf hierarchy + simple object properties).
+# A production deployment can swap in a real .owl file behind the same
+# OntologyLoader interface (see docs/ARCHITECTURE.md, Stage 5, Tech Stack).
+classes:
+  Entity: {}
+  LandCover: { subClassOf: "Entity" }
+  Vegetation: { subClassOf: "LandCover" }
+  Crop: { subClassOf: "Vegetation" }
+  CerealCrop: { subClassOf: "Crop" }
+  OilseedCrop: { subClassOf: "Crop" }
+  LegumeCrop: { subClassOf: "Crop" }
+  FibreCrop: { subClassOf: "Crop" }
+  Water: { subClassOf: "LandCover" }
+  BuiltUp: { subClassOf: "LandCover" }
+
+  Corn: { subClassOf: "CerealCrop" }
+  Rice: { subClassOf: "CerealCrop" }
+  Sesame: { subClassOf: "OilseedCrop" }
+  Cotton: { subClassOf: "FibreCrop" }
+  Broad-leaf soybean: { subClassOf: "LegumeCrop" }
+  Narrow-leaf soybean: { subClassOf: "LegumeCrop" }
+  Roads and houses: { subClassOf: "BuiltUp" }
+  Mixed weed: { subClassOf: "Vegetation" }
+  Background: { subClassOf: "Entity" }
+
+object_properties:
+  - name: adjacentTo
+    domain: LandCover
+    range: LandCover
+    symmetric: true
+  - name: growsIn
+    domain: Crop
+    range: LandCover
+  - name: requiresIrrigationFrom
+    domain: Crop
+    range: Water
+
+# Typical facts used by the OntologyMatcher / Refiner to validate
+# generated triples (Stage 5/6/8).
+axioms:
+  - subject: "Rice"
+    predicate: "requiresIrrigationFrom"
+    object: "Water"
+  - subject: "Rice"
+    predicate: "adjacentTo"
+    object: "Water"

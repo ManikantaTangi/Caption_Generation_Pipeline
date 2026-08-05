@@ -1,0 +1,81 @@
+dataset:
+  name: "WHU-Hi-LongKou"
+  root_dir: "data/synthetic"
+  image_key: "cube"
+  label_key: "labels"
+  num_bands: 270
+  num_classes: 10
+  class_names: ["Background", "Corn", "Cotton", "Sesame", "Broad-leaf soybean",
+                "Narrow-leaf soybean", "Rice", "Water", "Roads and houses", "Mixed weed"]
+  wavelength_range_nm: [400.0, 1000.0]
+
+patch:
+  patch_size: 15
+  stride: 5
+  normalize: "minmax"
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_seed: 42
+  use_official_split: false
+  official_split_dir: "data/WHU-Hi-LongKou/Training samples and test samples"
+  official_split_size: 200
+  official_split_prefix: "LK"
+  official_val_fraction: 0.1
+
+encoder:
+  spectral_embed_dim: 64
+  spatial_embed_dim: 64
+  metadata_embed_dim: 16
+  fused_embed_dim: 128
+  spectral_conv_kernels: [7, 5, 3]
+  spatial_patch_tokens: 9
+  fusion_strategy: "attention"
+  dropout: 0.1
+  mc_dropout_passes: 30
+
+knowledge:
+  spectral_library_path: "configs/spectral_library.yaml"
+  similarity_metric: "spectral_angle_mapper"
+  top_k_materials: 3
+  kg_similarity_threshold: 0.75
+
+reasoning:
+  rules_path: "configs/rules.yaml"
+  max_inference_hops: 3
+  contradiction_penalty: 0.5
+
+ontology:
+  ontology_path: "configs/ontology.yaml"
+  match_threshold: 0.6
+  refine_iterations: 2
+
+fact:
+  max_facts_per_patch: 8
+  min_fact_score: 0.3
+  relation_confidence_floor: 0.2
+
+uncertainty:
+  mc_dropout_passes: 30
+  temperature: 1.5
+  calibration_bins: 10
+  entropy_normalize: true
+
+verification:
+  verification_threshold: 0.55
+  semantic_similarity_weight: 0.20
+  kg_weight: 0.20
+  ontology_weight: 0.15
+  rule_weight: 0.15
+  classifier_weight: 0.30
+
+caption:
+  template_bank_path: "configs/caption_templates.yaml"
+  confidence_bands:
+    high: [0.75, 1.01]
+    medium: [0.45, 0.75]
+    low: [0.0, 0.45]
+  max_caption_length: 60
+
+log_level: "INFO"
+output_dir: "outputs"

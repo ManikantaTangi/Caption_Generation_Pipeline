@@ -1,0 +1,47 @@
+# Domain rules for Stage 4 (Expert Reasoning Layer).
+# Each rule is a simple forward-chaining IF-THEN clause over the
+# material/category facts produced by Stage 3. `condition` is evaluated
+# against the patch's material distribution; `conclusion` is asserted
+# with the given confidence if the condition holds.
+rules:
+  - id: R1
+    description: "Rice is frequently adjacent to standing water in paddy fields."
+    condition: { material: "Rice", min_fraction: 0.2 }
+    conclusion: { context: "paddy_field_context", related_material: "Water" }
+    confidence: 0.8
+
+  - id: R2
+    description: "Dense built-up material suppresses vegetation classification confidence."
+    condition: { material: "Roads and houses", min_fraction: 0.5 }
+    conclusion: { context: "urban_context", suppress_category: "vegetation" }
+    confidence: 0.7
+
+  - id: R3
+    description: "Mixed soybean cultivars indicate an agronomic trial or intercropping plot."
+    condition: { materials_any: ["Broad-leaf soybean", "Narrow-leaf soybean"], min_fraction: 0.15 }
+    conclusion: { context: "soybean_cultivation_context" }
+    confidence: 0.75
+
+  - id: R4
+    description: "Water-dominant patches with no crop signature indicate open water bodies."
+    condition: { material: "Water", min_fraction: 0.6 }
+    conclusion: { context: "open_water_context" }
+    confidence: 0.85
+
+  - id: R5
+    description: "High class entropy within a patch indicates a field-boundary / transition zone."
+    condition: { patch_entropy_gt: 1.5 }
+    conclusion: { context: "field_boundary_context" }
+    confidence: 0.6
+
+constraints:
+  - id: C1
+    description: "Water and Roads/houses cannot jointly dominate (>0.4 each) the same homogeneous patch."
+    type: "mutual_exclusion"
+    materials: ["Water", "Roads and houses"]
+    max_joint_fraction: 0.4
+
+  - id: C2
+    description: "A patch's material fractions must sum to 1.0 (+-1e-3)."
+    type: "sum_to_one"
+    tolerance: 0.001
