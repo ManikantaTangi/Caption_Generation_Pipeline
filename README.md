@@ -285,3 +285,220 @@ Generates explainable natural-language captions from verified facts.
 
 - Confidence-aware natural-language caption
 - Explainable reasoning summary
+
+## 📂 Repository Structure
+
+```text
+Caption-Generation-Pipeline/
+│
+├── configs/                         # YAML configuration files
+│   ├── dataset.yaml
+│   ├── model.yaml
+│   ├── ontology.yaml
+│   ├── rules.yaml
+│   ├── training.yaml
+│   └── inference.yaml
+│
+├── demo/                            # Training, inference and demonstration scripts
+│
+├── docs/
+│   ├── architecture.md
+│   └── stage_reports/
+│       ├── stage1.md
+│       ├── stage2.md
+│       ├── ...
+│       └── stage9.md
+│
+├── outputs/
+│   ├── figures/
+│   ├── encoder_weights.pt
+│   ├── uncertainty_head_weights.pt
+│   └── evaluation_reports/
+│
+├── src/
+│   └── hsi_caption/
+│       ├── stage1_preprocessing/
+│       ├── stage2_multi_encoder/
+│       ├── stage3_knowledge_engine/
+│       ├── stage4_reasoning/
+│       ├── stage5_ontology/
+│       ├── stage6_facts/
+│       ├── stage7_uncertainty/
+│       ├── stage8_verification/
+│       ├── stage9_caption/
+│       ├── config.py
+│       ├── datatypes.py
+│       ├── pipeline.py
+│       ├── nn_utils.py
+│       └── torch_modules.py
+│
+├── tests/
+│   ├── conftest.py
+│   ├── test_integration.py
+│   ├── test_stage1_preprocessing.py
+│   ├── test_stage2_multi_encoder.py
+│   ├── test_stage3_knowledge_engine.py
+│   ├── test_stage4_reasoning.py
+│   ├── test_stage5_ontology.py
+│   ├── test_stage6_facts.py
+│   ├── test_stage7_uncertainty.py
+│   ├── test_stage8_verification.py
+│   └── test_stage9_caption.py
+│
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
+
+---
+
+# 🛠️ Technology Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| Programming Language | Python 3.10+ |
+| Deep Learning | PyTorch |
+| Scientific Computing | NumPy |
+| Graph Processing | NetworkX |
+| Configuration | YAML |
+| Data Processing | SciPy, Pandas |
+| Visualization | Matplotlib |
+| Testing | PyTest |
+| Model Training | PyTorch Training Pipeline |
+| Uncertainty Estimation | Monte Carlo Dropout |
+| Knowledge Representation | Knowledge Graphs |
+| Semantic Reasoning | Ontology-Based Reasoning |
+| Explainable AI | Rule-Based Symbolic Reasoning |
+| Version Control | Git & GitHub |
+
+---
+
+# 📦 Installation
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/Caption-Generation-Pipeline.git
+
+cd Caption-Generation-Pipeline
+```
+
+---
+
+## 2. Create a Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+---
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Verify Installation
+
+```bash
+python --version
+
+pip list
+```
+
+---
+
+# 📊 Dataset
+
+This project is designed for the **WHU-Hi LongKou Hyperspectral Dataset**.
+
+The preprocessing pipeline automatically performs:
+
+- Dataset loading
+- Integrity validation
+- Spectral normalization
+- Patch extraction
+- Dataset inspection
+- False-color visualization
+- Ground truth visualization
+- Official train/test split loading
+- Synthetic dataset fallback (for development)
+
+---
+
+# ⚙️ Configuration
+
+All experiment parameters are controlled through YAML configuration files.
+
+Configuration includes:
+
+- Dataset paths
+- Model parameters
+- Patch size
+- Batch size
+- Learning rate
+- Number of epochs
+- Knowledge graph settings
+- Ontology settings
+- Bayesian inference parameters
+- Verification thresholds
+- Caption generation options
+
+This design enables reproducible experiments without modifying source code.
+
+---
+
+# 🚀 Running the Pipeline
+
+## Stage-wise Execution
+
+Each stage can be executed independently for experimentation and debugging.
+
+```bash
+python demo/run_stage1.py
+
+python demo/run_stage2.py
+
+python demo/run_stage3.py
+
+...
+
+python demo/run_stage9.py
+```
+
+---
+
+## End-to-End Pipeline
+
+```bash
+python demo/run_pipeline.py
+```
+
+The complete workflow performs:
+
+1. Data preprocessing
+2. Multi-encoder feature extraction
+3. Knowledge-guided reasoning
+4. Expert symbolic reasoning
+5. Ontology enrichment
+6. Structured fact generation
+7. Bayesian uncertainty estimation
+8. Fact verification
+9. Confidence-aware caption generation
+
+---
