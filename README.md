@@ -65,56 +65,56 @@ The Caption Generation Pipeline follows a modular **nine-stage architecture**, w
 
 ```text
                            ┌───────────────────────────┐
-                           │  Stage 1                  │
-                           │ Data Preprocessing        │
+                           │  Stage 1                       │
+                           │ Data Preprocessing             │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 2                  │
-                           │ Multi-Encoder Network     │
+                           │  Stage 2                       │
+                           │ Multi-Encoder Network          │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 3                  │
-                           │ Spectral Knowledge Engine │
+                           │  Stage 3                       │
+                           │ Spectral Knowledge Engine.     │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 4                  │
-                           │ Expert Reasoning Layer    │
+                           │  Stage 4                       │
+                           │ Expert Reasoning Layer         │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 5                  │
-                           │ Ontology Engine           │
+                           │  Stage 5                       │
+                           │ Ontology Engine                │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 6                  │
-                           │ Structured Fact Generator │
+                           │  Stage 6                       │
+                           │ Structured Fact Generator      │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 7                  │
-                           │ Bayesian Uncertainty      │
+                           │  Stage 7                       │
+                           │ Bayesian Uncertainty           │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 8                  │
-                           │ Fact Verification         │
+                           │  Stage 8                       │
+                           │ Fact Verification              │
                            └─────────────┬─────────────┘
                                          │
                                          ▼
                            ┌───────────────────────────┐
-                           │  Stage 9                  │
-                           │ Caption Generation        │
+                           │  Stage 9                       │
+                           │ Caption Generation             │
                            └───────────────────────────┘
 ```
 
