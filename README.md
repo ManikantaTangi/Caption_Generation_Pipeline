@@ -2,7 +2,7 @@
 
 > **A Knowledge-Guided Neuro-Symbolic Framework for Explainable Hyperspectral Image Caption Generation with Bayesian Uncertainty Estimation and Multi-Stage Fact Verification**
 
-## 📖 Overview
+##  Overview
 
 **Caption Generation Pipeline** is an end-to-end framework for generating **trustworthy, explainable natural-language captions** from hyperspectral imagery (HSI). Unlike conventional HSI classification systems that only predict land-cover labels, this project combines **deep learning**, **domain knowledge**, **ontology reasoning**, **Bayesian uncertainty estimation**, and **symbolic fact verification** to generate semantically rich, confidence-aware image descriptions.
 
@@ -12,7 +12,7 @@ Designed with a configuration-driven architecture, the project supports reproduc
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 The primary objectives of this project are:
 
@@ -26,7 +26,7 @@ The primary objectives of this project are:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - Multi-stage modular architecture
 - Spectral–Spatial Multi-Encoder Network
@@ -47,7 +47,7 @@ The primary objectives of this project are:
 
 ---
 
-## 🚀 Highlights
+## Highlights
 
 - End-to-end **9-stage hyperspectral image caption generation pipeline**
 - Neuro-symbolic AI architecture
@@ -59,7 +59,7 @@ The primary objectives of this project are:
 - Research-oriented modular software design
 - Reproducible experimental framework
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The Caption Generation Pipeline follows a modular **nine-stage architecture**, where each stage performs a dedicated task while passing structured outputs to the next stage. This design promotes modularity, reproducibility, maintainability, and independent testing.
 
@@ -120,7 +120,7 @@ The Caption Generation Pipeline follows a modular **nine-stage architecture**, w
 
 ---
 
-## ⚙️ Pipeline Stages
+## Pipeline Stages
 
 ### Stage 1 — Data Preprocessing
 
@@ -286,7 +286,7 @@ Generates explainable natural-language captions from verified facts.
 - Confidence-aware natural-language caption
 - Explainable reasoning summary
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```text
 Caption-Generation-Pipeline/
@@ -352,7 +352,7 @@ Caption-Generation-Pipeline/
 
 ---
 
-# 🛠️ Technology Stack
+#  Technology Stack
 
 | Category | Technologies |
 |-----------|--------------|
@@ -373,7 +373,7 @@ Caption-Generation-Pipeline/
 
 ---
 
-# 📦 Installation
+#  Installation
 
 ## 1. Clone the Repository
 
@@ -423,7 +423,7 @@ pip list
 
 ---
 
-# 📊 Dataset
+#  Dataset
 
 This project is designed for the **WHU-Hi LongKou Hyperspectral Dataset**.
 
@@ -441,7 +441,7 @@ The preprocessing pipeline automatically performs:
 
 ---
 
-# ⚙️ Configuration
+#  Configuration
 
 All experiment parameters are controlled through YAML configuration files.
 
@@ -463,7 +463,7 @@ This design enables reproducible experiments without modifying source code.
 
 ---
 
-# 🚀 Running the Pipeline
+#  Running the Pipeline
 
 ## Stage-wise Execution
 
@@ -503,7 +503,7 @@ The complete workflow performs:
 
 ---
 
-# 📈 Results
+#  Results
 
 The proposed Caption Generation Pipeline demonstrates the effectiveness of integrating deep learning with knowledge-guided reasoning, ontology enrichment, Bayesian uncertainty estimation, and multi-stage fact verification.
 
@@ -563,7 +563,7 @@ The pipeline automatically generates visualizations to support model evaluation 
 
 ---
 
-# 🧠 Explainable AI Pipeline
+#  Explainable AI Pipeline
 
 Unlike traditional hyperspectral classification systems, every generated caption is supported by explicit evidence.
 
@@ -610,7 +610,7 @@ This makes the entire prediction process interpretable and explainable.
 
 ---
 
-# 🔬 Research Contributions
+#  Research Contributions
 
 The proposed framework introduces several research-oriented contributions:
 
@@ -626,7 +626,7 @@ The proposed framework introduces several research-oriented contributions:
 
 ---
 
-# 🧪 Testing
+# Testing
 
 The project includes comprehensive testing to ensure correctness and reproducibility.
 
@@ -661,7 +661,7 @@ pytest tests/test_stage3_knowledge_engine.py
 
 ---
 
-# 🔮 Future Work
+#  Future Work
 
 Potential extensions include:
 
@@ -677,7 +677,7 @@ Potential extensions include:
 
 ---
 
-# 🤝 Contributing
+#  Contributing
 
 Contributions are welcome.
 
@@ -690,7 +690,7 @@ If you would like to improve the project:
 5. Open a Pull Request.
 
 ---
-# 📖 Citation
+#  Citation
 
 If you use this repository in your research, please cite it as:
 
@@ -704,7 +704,7 @@ If you use this repository in your research, please cite it as:
 }
 ```
 
-# 📜 License
+# License
 
 This project is released under the **MIT License**.
 
@@ -712,7 +712,7 @@ See the `LICENSE` file for additional details.
 
 ---
 
-# 🙏 Acknowledgements
+#  Acknowledgements
 
 This project builds upon concepts from:
 
@@ -729,7 +729,7 @@ Special thanks to the researchers and open-source community whose work has contr
 
 ---
 
-# 📧 Contact
+#  Contact
 
 For questions, discussions, or collaboration opportunities, feel free to open an issue or contact the repository maintainer.
 
